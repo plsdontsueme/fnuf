@@ -1,0 +1,54 @@
+{
+    "name": "Controlls",
+    "maps": [
+        {
+            "name": "playerInput",
+            "id": "a6526c26-afc1-4674-8248-b101fd0a0ab5",
+            "actions": [
+                {
+                    "name": "opencloseCam",
+                    "type": "Button",
+                    "id": "5e630224-cade-40e6-b161-9b5b195c06ba",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "ab1709b4-c73e-43a6-a499-e38b0b5739f3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b94a5258-0b02-4a39-a8d1-68a70a07a6df",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "opencloseCam",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "723135cf-2617-426f-9b2b-f42eb38be89c",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
