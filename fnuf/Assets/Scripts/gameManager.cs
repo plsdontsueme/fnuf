@@ -55,9 +55,10 @@ public class gameManager : MonoBehaviour
     {
         if (activeCam == index) return;
 
-        if (freddyState == 0 && index == 3) freddyState = 1;
-        else if (freddyState == 1 && index != 3) { freddyState = 2;  freddy.SetPositionAndRotation(freddyOtherPos.position, freddyOtherPos.rotation); }
-        else if (freddyState == 2 && index != 3) { freddyState = 3; freddy.SetPositionAndRotation(freddyNormalPos.position, freddyNormalPos.rotation); }
+        if (freddyState == 0 && index == 2) freddyState = 1;
+        else if (freddyState == 1 && index != 2) { freddyState = 2; freddy.SetPositionAndRotation(freddyOtherPos.position, freddyOtherPos.rotation); }
+        else if (freddyState == 2 && index == 2) { freddyState = 3; }
+        else if (freddyState == 3 && index != 2) { freddyState = 4; freddy.SetPositionAndRotation(freddyNormalPos.position, freddyNormalPos.rotation); }
 
 
         activeCam = index;
