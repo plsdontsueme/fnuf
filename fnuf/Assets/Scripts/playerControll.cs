@@ -20,6 +20,10 @@ public class playerControll : MonoBehaviour
     private void Awake()
     {
         tablet.transform.SetLocalPositionAndRotation(tabletPosPas.position, tabletPosPas.rotation);
+    }
+
+    private void Start()
+    {
         deactivateCam();
     }
 
@@ -46,7 +50,8 @@ public class playerControll : MonoBehaviour
         //print(transform.rotation.eulerAngles.y);
     }
 
-    public void onCam(InputAction.CallbackContext context) {
+    public void onCam(InputAction.CallbackContext context) 
+    {
         if (context.started) 
         { 
             if(inCams) deactivateCam();
@@ -55,11 +60,13 @@ public class playerControll : MonoBehaviour
         
     }
 
-void activateCam() {
+    void activateCam() 
+    {
         inCams = true;
         LeanTween.cancel(tablet.gameObject);
         tablet.LeanMove(tabletPosAct.position, tabletSpeed);
         tablet.LeanRotate(tabletPosAct.rotation.eulerAngles, tabletSpeed);
+        gameManager.instance.onCamOpen();
     }
 
     void deactivateCam()
@@ -68,5 +75,6 @@ void activateCam() {
         LeanTween.cancel(tablet.gameObject);
         tablet.LeanMove(tabletPosPas.position, tabletSpeed);
         tablet.LeanRotate(tabletPosPas.rotation.eulerAngles, tabletSpeed);
+        gameManager.instance.onCamClose();
     }
 }
